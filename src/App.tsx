@@ -41,12 +41,12 @@ function App() {
       delay: 0.4
     })
 
-    gsap.to('.container-bg', {
-      width: window.innerWidth * 1.5,
-      height: window.innerHeight * 1.5,
-      duration: 1.5,
-      delay: 0.3
-    })
+    // gsap.to('.container-bg', {
+    //   width: window.innerWidth * 1.5,
+    //   height: window.innerHeight * 1.5,
+    //   duration: 1.5,
+    //   delay: 0.3
+    // })
 
     gsap.from('.description-container', {
       opacity: 0,
