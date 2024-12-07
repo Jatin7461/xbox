@@ -77,12 +77,6 @@ const Scene = forwardRef<any, {}>(({ }, ref: any) => {
         toggle()
     }, 5000)
 
-
-    useFrame(() => {
-        // console.log(lightRef.current.color)
-        console.log(spring2.color)
-    })
-
     const sparkles = useSpring({
         from: { color: "purple" },
         to: { color: "green" }

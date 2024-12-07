@@ -5,7 +5,6 @@ import { useGSAP } from '@gsap/react';
 import gsap from 'gsap'
 import Description from './components/Description';
 import { Canvas } from '@react-three/fiber';
-import { BufferGeometry, Material, Mesh, NormalBufferAttributes, Object3DEventMap, } from 'three';
 
 function App() {
   // const sphere1: RefObject<any> = React.createRef()
@@ -21,25 +20,25 @@ function App() {
   const ref: RefObject<HTMLDivElement> = React.createRef()
   let xboxDimensions: any = {}
   let containerDimensions: any = {}
+  const xbox = document.querySelector('.xbox')
+  xboxDimensions = {
+    x: xbox?.clientWidth, y: xbox?.clientHeight
+  }
   useEffect(() => {
 
-    const xbox = document.querySelector('.xbox')
-    const containerBg = document.querySelector('.container-bg')
-    xboxDimensions = {
-      x: xbox?.clientWidth, y: xbox?.clientHeight
-    }
 
 
     // console.log(sphere1.current,'asdjflasdjkf')
-    console.log(xboxDimensions)
   }, [])
 
   useGSAP(() => {
+
+    console.log(xboxDimensions.x, 'asdhfkasjdf')
     gsap.to('.bg-color', {
-      width: xboxDimensions.x,
-      height: xboxDimensions.y,
+      width: window.innerWidth / 2,
+      height: window.innerHeight,
       duration: 1,
-      delay: 0.3
+      delay: 0.4
     })
 
     gsap.to('.container-bg', {

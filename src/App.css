@@ -29,6 +29,7 @@ body {
   flex: 1;
   margin: 1% 0;
   /* background-color: black; */
+  overflow: hidden;
   border-radius: 0 50% 50% 0;
   position: relative;
   z-index: 1;
